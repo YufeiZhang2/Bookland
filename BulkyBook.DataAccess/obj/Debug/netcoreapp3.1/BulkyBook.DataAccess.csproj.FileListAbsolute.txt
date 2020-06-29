@@ -1,0 +1,17 @@
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/bin/Debug/netcoreapp3.1/BulkyBook.DataAccess.deps.json
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/bin/Debug/netcoreapp3.1/BulkyBook.DataAccess.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/bin/Debug/netcoreapp3.1/BulkyBook.DataAccess.pdb
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/obj/Debug/netcoreapp3.1/BulkyBook.DataAccess.csprojAssemblyReference.cache
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/obj/Debug/netcoreapp3.1/BulkyBook.DataAccess.AssemblyInfoInputs.cache
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/obj/Debug/netcoreapp3.1/BulkyBook.DataAccess.AssemblyInfo.cs
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/obj/Debug/netcoreapp3.1/BulkyBook.DataAccess.csproj.CoreCompileInputs.cache
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/obj/Debug/netcoreapp3.1/BulkyBook.DataAccess.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/obj/Debug/netcoreapp3.1/BulkyBook.DataAccess.pdb
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/bin/Debug/netcoreapp3.1/BulkyBook.Models.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/bin/Debug/netcoreapp3.1/BulkyBook.Utility.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/bin/Debug/netcoreapp3.1/BulkyBook.Models.pdb
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/bin/Debug/netcoreapp3.1/BulkyBook.Utility.pdb
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/obj/Debug/netcoreapp3.1/BulkyBook.DataAccess.csproj.CopyComplete
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/bin/Debug/netcoreapp3.1/BulkyBook.DataAccess.runtimeconfig.json
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/bin/Debug/netcoreapp3.1/BulkyBook.DataAccess.runtimeconfig.dev.json
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/obj/Debug/netcoreapp3.1/BulkyBook.DataAccess.genruntimeconfig.cache

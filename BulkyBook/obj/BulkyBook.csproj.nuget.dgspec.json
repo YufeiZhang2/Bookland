@@ -1,0 +1,304 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/BulkyBook.csproj": {}
+  },
+  "projects": {
+    "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/BulkyBook.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/BulkyBook.DataAccess.csproj",
+        "projectName": "BulkyBook.DataAccess",
+        "projectPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/BulkyBook.DataAccess.csproj",
+        "packagesPath": "/Users/zhangyufei/.nuget/packages/",
+        "outputPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/zhangyufei/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Models/BulkyBook.Models.csproj": {
+                "projectPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Models/BulkyBook.Models.csproj"
+              },
+              "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Utility/BulkyBook.Utility.csproj": {
+                "projectPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Utility/BulkyBook.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Models/BulkyBook.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Models/BulkyBook.Models.csproj",
+        "projectName": "BulkyBook.Models",
+        "projectPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Models/BulkyBook.Models.csproj",
+        "packagesPath": "/Users/zhangyufei/.nuget/packages/",
+        "outputPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Models/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/zhangyufei/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Utility/BulkyBook.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Utility/BulkyBook.Utility.csproj",
+        "projectName": "BulkyBook.Utility",
+        "projectPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Utility/BulkyBook.Utility.csproj",
+        "packagesPath": "/Users/zhangyufei/.nuget/packages/",
+        "outputPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Utility/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/zhangyufei/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/BulkyBook.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/BulkyBook.csproj",
+        "projectName": "BulkyBook",
+        "projectPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/BulkyBook.csproj",
+        "packagesPath": "/Users/zhangyufei/.nuget/packages/",
+        "outputPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/zhangyufei/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/BulkyBook.DataAccess.csproj": {
+                "projectPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.DataAccess/BulkyBook.DataAccess.csproj"
+              },
+              "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Models/BulkyBook.Models.csproj": {
+                "projectPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Models/BulkyBook.Models.csproj"
+              },
+              "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Utility/BulkyBook.Utility.csproj": {
+                "projectPath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Utility/BulkyBook.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

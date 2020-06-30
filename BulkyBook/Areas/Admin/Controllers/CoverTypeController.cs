@@ -1,4 +1,3 @@
-using System;
 using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -6,11 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace BulkyBook.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class CategoryController : Controller
+    public class CoverTypeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        public CategoryController(IUnitOfWork unitOfWork)
+        public CoverTypeController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
@@ -23,66 +22,64 @@ namespace BulkyBook.Areas.Admin.Controllers
         
         public IActionResult Upsert(int? id)
         {
-            Category category = new Category();
+            CoverType category = new CoverType();
             if (id == null)
             {
                 //this is for create
                 return View(category);
             }
             //this is for edit
-            category = _unitOfWork.Category.Get(id.GetValueOrDefault());
+            category = _unitOfWork.CoverType.Get(id.GetValueOrDefault());
             if (category == null)
             {
                 return NotFound();
             }
             return View(category);
         }
-
         
         #region API CALLS
 
         [HttpGet]
         public IActionResult GetAll()
         {
-            var allObj = _unitOfWork.Category.GetAll();
+            var allObj = _unitOfWork.CoverType.GetAll();
             return Json(new {data = allObj});
         }
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Category category)
+        public IActionResult Upsert(CoverType coverType)
         {
             //check all the validation defined in model - double check here
             if (ModelState.IsValid)
             {
-                if (category.Id == 0)
+                if (coverType.Id == 0)
                 {
-                    _unitOfWork.Category.Add(category);
+                    _unitOfWork.CoverType.Add(coverType);
                 }
                 else
                 {
-                    _unitOfWork.Category.Update(category);
+                    _unitOfWork.CoverType.Update(coverType);
                 }
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View(coverType);
         }
 
         [HttpDelete]
         public IActionResult Delete(int id)
         {
-            var objFromDb = _unitOfWork.Category.Get(id);
+            var objFromDb = _unitOfWork.CoverType.Get(id);
             if (objFromDb == null)
             {
                 return Json(new
                     {success = false, message = "There was an error for deleting this item. Please try again later."});
             }
-            _unitOfWork.Category.Remove(objFromDb);
+            _unitOfWork.CoverType.Remove(objFromDb);
             _unitOfWork.Save();
             return Json(new {success = true, message = "The item was deleted."});
         }
-        
         #endregion
     }
 }

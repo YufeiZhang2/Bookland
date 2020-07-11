@@ -100,3 +100,9 @@
 /Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_EditAndBackToListButton.cshtml.g.cs
 /Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/CoverType/Index.cshtml.g.cs
 /Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/CoverType/Upsert.cshtml.g.cs
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/bin/Debug/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Product/Index.cshtml.g.cs
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Product/Upsert.cshtml.g.cs

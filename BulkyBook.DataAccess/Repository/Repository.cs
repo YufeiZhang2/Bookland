@@ -37,6 +37,7 @@ namespace BulkyBook.DataAccess.Repository
             {
                 foreach (var includeProp in includeProperties.Split(new char[]{','}, StringSplitOptions.RemoveEmptyEntries))
                 {
+                    //include the reference tables
                     query = query.Include((includeProp));
                 }
             }

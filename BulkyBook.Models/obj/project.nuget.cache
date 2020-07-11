@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qNvux0cBgoBtbI6wVulb++HItxmDaa/w//FQSbKKaT2Nclk6nsMLWQuUGE8wj9eyVDU+O2dPsdFyqy+anp4Ytg==",
+  "dgSpecHash": "THwFkdSQxa31eeYnqX+s7QCjEt1+v1N3q+eTkMxQjy5QGkiX/35wITZUFT2R+fxjuO9qzlrhluYGJCCdz7Wccg==",
   "success": true,
   "projectFilePath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Models/BulkyBook.Models.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,8 @@
     "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.authentication.core/2.2.0/microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.authorization/2.2.0/microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.authorization.policy/2.2.0/microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
-    "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.cryptography.internal/2.2.0/microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
+    "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.cryptography.internal/3.1.5/microsoft.aspnetcore.cryptography.internal.3.1.5.nupkg.sha512",
+    "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/3.1.5/microsoft.aspnetcore.cryptography.keyderivation.3.1.5.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.dataprotection/2.2.0/microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.dataprotection.abstractions/2.2.0/microsoft.aspnetcore.dataprotection.abstractions.2.2.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.diagnostics.abstractions/2.2.0/microsoft.aspnetcore.diagnostics.abstractions.2.2.0.nupkg.sha512",
@@ -50,6 +51,8 @@
     "/Users/zhangyufei/.nuget/packages/microsoft.extensions.dependencymodel/2.1.0/microsoft.extensions.dependencymodel.2.1.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.extensions.fileproviders.abstractions/2.2.0/microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.extensions.hosting.abstractions/2.2.0/microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512",
+    "/Users/zhangyufei/.nuget/packages/microsoft.extensions.identity.core/3.1.5/microsoft.extensions.identity.core.3.1.5.nupkg.sha512",
+    "/Users/zhangyufei/.nuget/packages/microsoft.extensions.identity.stores/3.1.5/microsoft.extensions.identity.stores.3.1.5.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.extensions.localization/2.2.0/microsoft.extensions.localization.2.2.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.extensions.localization.abstractions/2.2.0/microsoft.extensions.localization.abstractions.2.2.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.extensions.logging/3.1.5/microsoft.extensions.logging.3.1.5.nupkg.sha512",

@@ -15,12 +15,12 @@ namespace BulkyBook.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
         }
         
-        // GET
         public IActionResult Index()
         {
             return View();
         }
         
+        [HttpGet]
         public IActionResult Upsert(int? id)
         {
             Category category = new Category();
@@ -37,9 +37,7 @@ namespace BulkyBook.Areas.Admin.Controllers
             }
             return View(category);
         }
-
         
-        #region API CALLS
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -81,7 +79,5 @@ namespace BulkyBook.Areas.Admin.Controllers
             _unitOfWork.Save();
             return Json(new {success = true, message = "The item was deleted."});
         }
-        
-        #endregion
     }
 }

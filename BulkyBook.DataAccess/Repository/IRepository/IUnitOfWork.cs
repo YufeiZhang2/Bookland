@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
 
 namespace BulkyBook.DataAccess.Repository.IRepository
 {
@@ -8,8 +10,20 @@ namespace BulkyBook.DataAccess.Repository.IRepository
         
         ICoverTypeRepository CoverType { get; }
         
+        ICompanyRepository Company { get; }
+        
         IProductRepository Product { get; }
+        
+        IApplicationUserRepository ApplicationUser { get; }
 
+        public List<IdentityUserRole<string>> GetUserRoleMapList();
+        
+        public List<IdentityRole> GetAllUserRoles();
+
+        void Dispose();
+        
         void Save();
+        
+        
     }
 }

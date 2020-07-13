@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "M2soSQrNbzCoEr2A2BXoQv0YpfDEPfSdStZWtddC+hu3PEzWEeMOGbTt7TrzBWfb3mSGwh9LqIJCKc+kICRr3A==",
+  "dgSpecHash": "2Txg7+mwiCXJw32YVkIYqMnUZRoaswuabae244X6QX41esnGTdpdOQkgZOvQCczZSnKocYx5wnrwUAfQRln+qw==",
   "success": true,
   "projectFilePath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Utility/BulkyBook.Utility.csproj",
   "expectedPackageFiles": [
+    "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.authentication.facebook/3.1.5/microsoft.aspnetcore.authentication.facebook.3.1.5.nupkg.sha512",
+    "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.authentication.google/3.1.5/microsoft.aspnetcore.authentication.google.3.1.5.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.cryptography.internal/3.1.5/microsoft.aspnetcore.cryptography.internal.3.1.5.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/3.1.5/microsoft.aspnetcore.cryptography.keyderivation.3.1.5.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/microsoft.aspnetcore.identity.ui/3.1.5/microsoft.aspnetcore.identity.ui.3.1.5.nupkg.sha512",
@@ -41,6 +43,8 @@
     "/Users/zhangyufei/.nuget/packages/runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "/Users/zhangyufei/.nuget/packages/sendgrid/9.18.0/sendgrid.9.18.0.nupkg.sha512",
+    "/Users/zhangyufei/.nuget/packages/starkbank-ecdsa/1.2.0/starkbank-ecdsa.1.2.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/system.collections.concurrent/4.3.0/system.collections.concurrent.4.3.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/system.collections.immutable/1.7.1/system.collections.immutable.1.7.1.nupkg.sha512",

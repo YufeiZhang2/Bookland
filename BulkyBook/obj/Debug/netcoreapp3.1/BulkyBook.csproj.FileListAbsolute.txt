@@ -187,3 +187,12 @@
 /Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewImports.cshtml.g.cs
 /Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Logout.cshtml.g.cs
 /Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/User/Index.cshtml.g.cs
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/AccessDenied.cshtml.g.cs
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/ExternalLogin.cshtml.g.cs
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml.g.cs
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml.g.cs
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/bin/Debug/netcoreapp3.1/SendGrid.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/bin/Debug/netcoreapp3.1/StarkbankEcdsa.dll
+/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml.g.cs

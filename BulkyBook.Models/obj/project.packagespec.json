@@ -29,6 +29,14 @@
   "frameworks": {
     "netcoreapp3.1": {
       "dependencies": {
+        "Microsoft.AspNetCore.Authentication.Facebook": {
+          "target": "Package",
+          "version": "[3.1.5, )"
+        },
+        "Microsoft.AspNetCore.Authentication.Google": {
+          "target": "Package",
+          "version": "[3.1.5, )"
+        },
         "Microsoft.AspNetCore.Mvc.ViewFeatures": {
           "target": "Package",
           "version": "[2.2.0, )"
@@ -40,6 +48,10 @@
         "Microsoft.Extensions.Identity.Stores": {
           "target": "Package",
           "version": "[3.1.5, )"
+        },
+        "SendGrid": {
+          "target": "Package",
+          "version": "[9.18.0, )"
         }
       },
       "imports": [
@@ -53,6 +65,9 @@
       "assetTargetFallback": true,
       "warn": true,
       "frameworkReferences": {
+        "Microsoft.AspNetCore.App": {
+          "privateAssets": "none"
+        },
         "Microsoft.NETCore.App": {
           "privateAssets": "all"
         }

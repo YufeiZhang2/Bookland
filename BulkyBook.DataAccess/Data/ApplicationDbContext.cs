@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace BulkyBook.Data
+namespace BulkyBook.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

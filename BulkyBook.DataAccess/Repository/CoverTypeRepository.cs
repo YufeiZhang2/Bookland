@@ -1,5 +1,5 @@
 using System.Linq;
-using BulkyBook.Data;
+using BulkyBook.DataAccess.Data;
 using BulkyBook.Models;
 
 namespace BulkyBook.DataAccess.Repository.IRepository

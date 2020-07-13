@@ -1,14 +1,16 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using BulkyBook.Data;
 using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
+using BulkyBook.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyBook.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = GlobalVar.Role_Admin + "," + GlobalVar.Role_Employee)]
     public class UserController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -50,19 +52,45 @@ namespace BulkyBook.Areas.Admin.Controllers
             return Json(new {data = userList});
         }
 
-
-        [HttpDelete]
-        public IActionResult Delete(int id)
+        [HttpPost]
+        public IActionResult LockUnlock([FromBody] string id)
         {
-            var objFromDb = _unitOfWork.Category.Get(id);
+            var objFromDb = 
+                _unitOfWork.ApplicationUser.GetFirstOrDefault(u => u.Id == id);
+            
             if (objFromDb == null)
             {
-                return Json(new
-                    {success = false, message = "There was an error for deleting this item. Please try again later."});
+                return Json(new {success = false, message = "There is an error for locking and unlocking."});
             }
-            _unitOfWork.Category.Remove(objFromDb);
+
+            if (objFromDb.LockoutEnd != null && objFromDb.LockoutEnd > DateTime.Now)
+            {
+                //unlock the locked user
+                objFromDb.LockoutEnd = DateTime.Now;
+            }
+            else
+            {
+                //lock the user
+                objFromDb.LockoutEnd = DateTime.Now.AddYears(1000);
+            }
             _unitOfWork.Save();
-            return Json(new {success = true, message = "The item was deleted."});
+
+            return Json(new {success = true, message = "You operation is successful."});
         }
+
+
+        // [HttpDelete]
+        // public IActionResult Delete(int id)
+        // {
+        //     var objFromDb = _unitOfWork.Category.Get(id);
+        //     if (objFromDb == null)
+        //     {
+        //         return Json(new
+        //             {success = false, message = "There was an error for deleting this item. Please try again later."});
+        //     }
+        //     _unitOfWork.Category.Remove(objFromDb);
+        //     _unitOfWork.Save();
+        //     return Json(new {success = true, message = "The item was deleted."});
+        // }
     }
 }

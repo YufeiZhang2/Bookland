@@ -41,7 +41,8 @@ namespace BulkyBook
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.Configure<EmailOptions>(Configuration);
             services.AddControllersWithViews();
-            services.AddRazorPages();
+            //enable razor pages to render the changes on runtime
+            services.AddRazorPages().AddRazorRuntimeCompilation();
             //redirect user to pages when they are not logged-in or their roles do not have authorised accessibility
             services.ConfigureApplicationCookie(options =>
             {

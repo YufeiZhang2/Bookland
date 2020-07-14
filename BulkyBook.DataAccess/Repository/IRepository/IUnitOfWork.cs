@@ -15,6 +15,12 @@ namespace BulkyBook.DataAccess.Repository.IRepository
         IProductRepository Product { get; }
         
         IApplicationUserRepository ApplicationUser { get; }
+        
+        IShoppingCartRepository ShoppingCart { get; }
+        
+        IOrderHeaderRepository OrderHeader { get; }
+        
+        IOrderDetailRepository OrderDetail { get; }
 
         public List<IdentityUserRole<string>> GetUserRoleMapList();
         

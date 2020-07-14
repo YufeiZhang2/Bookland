@@ -21,8 +21,6 @@ namespace BulkyBook.Utility
          }
          private Task Execute(string sendGridKey, string email, string subject, string htmlMessage)
          {
-             Console.WriteLine(sendGridKey);
-             Console.WriteLine(email);
              var client = new SendGridClient(sendGridKey);
              var from = new EmailAddress("yufei.z222@gmail.com", "Yufei");
              // var subject = "Sending with SendGrid is Fun";
@@ -32,7 +30,7 @@ namespace BulkyBook.Utility
              var msg = 
                  MailHelper.CreateSingleEmail(from, to, subject, "",  htmlMessage);
                 
-             return client.SendEmailAsync(msg);
+             return client.SendEmailAsync(msg);    
          }
     }
 }

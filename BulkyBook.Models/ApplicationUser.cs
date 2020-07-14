@@ -20,8 +20,8 @@ namespace BulkyBook.Models
         [NotMapped] 
         public string Role { get; set; }
         
-        [ForeignKey("CompanyId")]
         public int? CompanyId { get; set; }
+        [ForeignKey("CompanyId")]
         public Company Company { get; set; }
     }
 }

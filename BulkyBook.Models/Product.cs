@@ -38,13 +38,13 @@ namespace BulkyBook.Models
         public string ImageUrl { get; set; }
         
         [Required] 
-        [ForeignKey("CategoryId")] 
         public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
         public Category Category { get; set; }
         
-        [Required] 
-        [ForeignKey("CoverTypeId")] 
+        [Required]
         public int CoverTypeId { get; set; }
+        [ForeignKey("CoverTypeId")] 
         public CoverType CoverType { get; set; }
     }
 }

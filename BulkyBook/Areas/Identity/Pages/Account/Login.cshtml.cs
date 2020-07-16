@@ -4,8 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using BulkyBook.DataAccess.Repository.IRepository;
+using BulkyBook.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -20,14 +23,20 @@ namespace BulkyBook.Areas.Identity.Pages.Account
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
         public LoginModel(SignInManager<IdentityUser> signInManager, 
             ILogger<LoginModel> logger,
-            UserManager<IdentityUser> userManager)
+            UserManager<IdentityUser> userManager,
+            IUnitOfWork unitOfWork,
+            IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
+            _unitOfWork = unitOfWork;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         [BindProperty]
@@ -82,6 +91,18 @@ namespace BulkyBook.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+                    var currentUser = _unitOfWork.ApplicationUser.GetFirstOrDefault(user => user.Email == Input.Email);
+                    //get user's cart and store the count in session
+                    var allCarts = _unitOfWork.ShoppingCart
+                        .GetAll(cart => cart.ApplicationUserId == currentUser.Id);
+                    var count = 0;
+                    foreach (var cart in allCarts)
+                    {
+                        count += cart.Count;
+                    }
+                    _httpContextAccessor.HttpContext.Session
+                        .SetString(Utility.GlobalUti.ShoppingCartSession, count.ToString());
+
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }

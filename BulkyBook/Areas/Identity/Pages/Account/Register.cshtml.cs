@@ -105,7 +105,7 @@ namespace BulkyBook.Areas.Identity.Pages.Account
                         Text = c.Name,
                         Value = c.Id.ToString()
                     }),
-                RoleList = _roleManager.Roles.Where(role => role.Name != GlobalVar.Role_User_Individual).Select(r => 
+                RoleList = _roleManager.Roles.Where(role => role.Name != Utility.GlobalUti.Role_User_Individual).Select(r => 
                     new SelectListItem
                     {
                         Text = r.Name,
@@ -141,35 +141,35 @@ namespace BulkyBook.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    if (!await _roleManager.RoleExistsAsync(GlobalVar.Role_Admin))
+                    if (!await _roleManager.RoleExistsAsync(Utility.GlobalUti.Role_Admin))
                     {
-                        await _roleManager.CreateAsync(new IdentityRole(GlobalVar.Role_Admin));
+                        await _roleManager.CreateAsync(new IdentityRole(Utility.GlobalUti.Role_Admin));
                     }
                     
-                    if (!await _roleManager.RoleExistsAsync(GlobalVar.Role_Employee))
+                    if (!await _roleManager.RoleExistsAsync(Utility.GlobalUti.Role_Employee))
                     {
-                        await _roleManager.CreateAsync(new IdentityRole(GlobalVar.Role_Employee));
+                        await _roleManager.CreateAsync(new IdentityRole(Utility.GlobalUti.Role_Employee));
                     }
                     
-                    if (!await _roleManager.RoleExistsAsync(GlobalVar.Role_User_Individual))
+                    if (!await _roleManager.RoleExistsAsync(Utility.GlobalUti.Role_User_Individual))
                     {
-                        await _roleManager.CreateAsync(new IdentityRole(GlobalVar.Role_User_Individual));
+                        await _roleManager.CreateAsync(new IdentityRole(Utility.GlobalUti.Role_User_Individual));
                     }
                     
-                    if (!await _roleManager.RoleExistsAsync(GlobalVar.Role_User_Company))
+                    if (!await _roleManager.RoleExistsAsync(Utility.GlobalUti.Role_User_Company))
                     {
-                        await _roleManager.CreateAsync(new IdentityRole(GlobalVar.Role_User_Company));
+                        await _roleManager.CreateAsync(new IdentityRole(Utility.GlobalUti.Role_User_Company));
                     }
 
                     if (user.Role == null)
                     {
-                        await _userManager.AddToRoleAsync(user, GlobalVar.Role_User_Individual);
+                        await _userManager.AddToRoleAsync(user, Utility.GlobalUti.Role_User_Individual);
                     }
                     else
                     {
                         if (user.CompanyId > 0)
                         {
-                            await _userManager.AddToRoleAsync(user, GlobalVar.Role_User_Company);
+                            await _userManager.AddToRoleAsync(user, Utility.GlobalUti.Role_User_Company);
                         }
                         await _userManager.AddToRoleAsync(user, user.Role);
                     }
@@ -208,7 +208,22 @@ namespace BulkyBook.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-
+            
+            Input = new InputModel()
+            {
+                CompanyList = _unitOfWork.Company.GetAll().Select(c => 
+                    new SelectListItem
+                    {
+                        Text = c.Name,
+                        Value = c.Id.ToString()
+                    }),
+                RoleList = _roleManager.Roles.Where(role => role.Name != Utility.GlobalUti.Role_User_Individual).Select(r => 
+                    new SelectListItem
+                    {
+                        Text = r.Name,
+                        Value = r.Name
+                    })
+            };
             // If we got this far, something failed, redisplay form
             return Page();
         }

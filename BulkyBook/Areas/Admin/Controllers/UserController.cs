@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BulkyBook.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = GlobalVar.Role_Admin + "," + GlobalVar.Role_Employee)]
+    [Authorize(Roles = Utility.GlobalUti.Role_Admin + "," + Utility.GlobalUti.Role_Employee)]
     public class UserController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

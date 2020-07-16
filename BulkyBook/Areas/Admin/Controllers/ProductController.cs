@@ -13,10 +13,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace BulkyBook.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = GlobalVar.Role_Admin)]
+    [Authorize(Roles = Utility.GlobalUti.Role_Admin)]
     public class ProductController : Controller
     {
-        
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _hostEnvironment;
 
@@ -86,6 +85,7 @@ namespace BulkyBook.Areas.Admin.Controllers
             //check all the validation defined in model - double check here
             if (ModelState.IsValid)
             {
+                Console.WriteLine(productViewModel.Product.Description);
                 string webRootPath = _hostEnvironment.WebRootPath;
                 //retrive the files
                 var files = HttpContext.Request.Form.Files;

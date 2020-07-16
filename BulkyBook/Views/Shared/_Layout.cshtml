@@ -1,4 +1,6 @@
 ﻿@using BulkyBook.Utility
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccesser
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +26,9 @@
                 <partial name="_LoginPartial"/>
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
-                    @if (User.IsInRole(GlobalVar.Role_Admin))
+                    @if (User.IsInRole(GlobalUti.Role_Admin))
                     {
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,7 +41,7 @@
                             </div>
                         </li>
                     }
-                    @if (User.IsInRole(GlobalVar.Role_Admin) || User.IsInRole(GlobalVar.Role_Employee))
+                    @if (User.IsInRole(GlobalUti.Role_Admin) || User.IsInRole(GlobalUti.Role_Employee))
                     {
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,6 +51,25 @@
                                 <a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">Users</a>
                                 <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Companies</a>
                             </div>
+                        </li>
+                    }
+                    @if (HttpContextAccesser.HttpContext.Session.GetObject<string>(GlobalUti.ShoppingCartSession) != null)
+                    {
+                        <li class="nav-item" style="padding: 7px 0px">
+                            <a asp-area="Customer" asp-controller="ShoppingCart" asp-action="Index" style="color: white;text-decoration: none;">
+                                @{
+                                   var count = HttpContextAccesser.HttpContext.Session.GetObject<string>(GlobalUti.ShoppingCartSession);
+                                 }  
+                                 <i class="fas fa-shopping-cart"></i> (@count)
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item" style="padding: 7px 0px">
+                            <a asp-area="Customer" asp-controller="ShoppingCart" asp-action="Index" style="color: white;text-decoration: none;">
+                              <i class="fas fa-shopping-cart"></i>(0)
+                            </a>
                         </li>
                     }
                 </ul>

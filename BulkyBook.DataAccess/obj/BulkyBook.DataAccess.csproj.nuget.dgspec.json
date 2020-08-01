@@ -81,6 +81,10 @@
             "SendGrid": {
               "target": "Package",
               "version": "[9.18.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[37.18.0, )"
             }
           },
           "imports": [
@@ -164,6 +168,10 @@
             "SendGrid": {
               "target": "Package",
               "version": "[9.18.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[37.18.0, )"
             }
           },
           "imports": [
@@ -243,6 +251,10 @@
             "SendGrid": {
               "target": "Package",
               "version": "[9.18.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[37.18.0, )"
             }
           },
           "imports": [

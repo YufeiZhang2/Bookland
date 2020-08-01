@@ -36,17 +36,18 @@ namespace BulkyBook.Models
 
         public string TransactionId { get; set; }
         
-        //Details for another shipping address different than the existing one
+        //Details for billing address or another address
+        [Required]
         public string Name { get; set; }
-
+        [Required]
         public string PhoneNumber { get; set; }
-        
+        [Required]
         public string StreetAddress { get; set; }
-
+        [Required]
         public string City { get; set; }
-
+        [Required]
         public string State { get; set; }
-
+        [Required]
         public string PostalCode { get; set; }
     }
 }

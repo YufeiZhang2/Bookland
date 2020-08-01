@@ -6,5 +6,7 @@ namespace BulkyBook.Models.ViewModels
     {
         public IEnumerable<ShoppingCart> ListOfProductsInCart { get; set; }
         public OrderHeader OrderHeader { get; set; }
+        
+        public int NewQuantity { get; set; }
     }
 }

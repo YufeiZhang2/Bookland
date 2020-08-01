@@ -20,6 +20,7 @@ namespace BulkyBook.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
@@ -79,18 +80,18 @@ namespace BulkyBook.Areas.Admin.Controllers
         }
 
 
-        // [HttpDelete]
-        // public IActionResult Delete(int id)
-        // {
-        //     var objFromDb = _unitOfWork.Category.Get(id);
-        //     if (objFromDb == null)
-        //     {
-        //         return Json(new
-        //             {success = false, message = "There was an error for deleting this item. Please try again later."});
-        //     }
-        //     _unitOfWork.Category.Remove(objFromDb);
-        //     _unitOfWork.Save();
-        //     return Json(new {success = true, message = "The item was deleted."});
-        // }
+        [HttpDelete]
+        public IActionResult Delete(string id)
+        {
+            var objFromDb = _unitOfWork.ApplicationUser.GetFirstOrDefault(user => user.Id == id);
+            if (objFromDb == null)
+            {
+                return Json(new
+                    {success = false, message = "There was an error for deleting this item. Please try again later."});
+            }
+            _unitOfWork.ApplicationUser.Remove(objFromDb);
+            _unitOfWork.Save();
+            return Json(new {success = true, message = "The item was deleted."});
+        }
     }
 }

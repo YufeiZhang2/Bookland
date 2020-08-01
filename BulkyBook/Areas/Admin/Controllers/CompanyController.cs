@@ -17,6 +17,7 @@ namespace BulkyBook.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
         }
         
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
@@ -33,6 +34,13 @@ namespace BulkyBook.Areas.Admin.Controllers
             }
             company = _unitOfWork.Company.Get(id.GetValueOrDefault());
             return View(company);
+        }
+        
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var objFromDb = _unitOfWork.Company.GetAll();
+            return Json(new{ data = objFromDb});
         }
 
         [HttpPost]
@@ -54,13 +62,6 @@ namespace BulkyBook.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(company);
-        }
-
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-            var objFromDb = _unitOfWork.Company.GetAll();
-            return Json(new{ data = objFromDb});
         }
 
         [HttpDelete]

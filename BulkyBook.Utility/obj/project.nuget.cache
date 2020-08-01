@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6mMtnAfi/ndG0lQ7LJ/HuK17grj2NkUCd3Y1v+vt76quPSBT3NE3rJzONZ1CyX3GmLwOW5CmATb6O+6Xt92UUA==",
+  "dgSpecHash": "121jskpaJZdtNSiuIEoI+IyLVkN2t3oFN0dYkxaEE1/O8M192+/3Us1gHvVKu9gtS851/2BL9WzW+FiPp4PAdQ==",
   "success": true,
   "projectFilePath": "/Users/zhangyufei/Documents/repo/BulkyBook/BulkyBook.Utility/BulkyBook.Utility.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,7 @@
     "/Users/zhangyufei/.nuget/packages/runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/sendgrid/9.18.0/sendgrid.9.18.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/starkbank-ecdsa/1.2.0/starkbank-ecdsa.1.2.0.nupkg.sha512",
+    "/Users/zhangyufei/.nuget/packages/stripe.net/37.18.0/stripe.net.37.18.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/system.collections.concurrent/4.3.0/system.collections.concurrent.4.3.0.nupkg.sha512",
     "/Users/zhangyufei/.nuget/packages/system.collections.immutable/1.7.1/system.collections.immutable.1.7.1.nupkg.sha512",

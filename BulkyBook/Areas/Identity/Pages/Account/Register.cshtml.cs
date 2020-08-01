@@ -112,6 +112,17 @@ namespace BulkyBook.Areas.Identity.Pages.Account
                         Value = r.Name
                     })
             };
+
+            if (User.IsInRole(GlobalUti.Role_Employee))
+            {
+                Input.RoleList = _roleManager.Roles.Where(role => role.Name == Utility.GlobalUti.Role_User_Company)
+                    .Select(r =>
+                        new SelectListItem
+                        {
+                            Text = r.Name,
+                            Value = r.Name
+                        });
+            }
             
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
@@ -140,26 +151,6 @@ namespace BulkyBook.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-
-                    if (!await _roleManager.RoleExistsAsync(Utility.GlobalUti.Role_Admin))
-                    {
-                        await _roleManager.CreateAsync(new IdentityRole(Utility.GlobalUti.Role_Admin));
-                    }
-                    
-                    if (!await _roleManager.RoleExistsAsync(Utility.GlobalUti.Role_Employee))
-                    {
-                        await _roleManager.CreateAsync(new IdentityRole(Utility.GlobalUti.Role_Employee));
-                    }
-                    
-                    if (!await _roleManager.RoleExistsAsync(Utility.GlobalUti.Role_User_Individual))
-                    {
-                        await _roleManager.CreateAsync(new IdentityRole(Utility.GlobalUti.Role_User_Individual));
-                    }
-                    
-                    if (!await _roleManager.RoleExistsAsync(Utility.GlobalUti.Role_User_Company))
-                    {
-                        await _roleManager.CreateAsync(new IdentityRole(Utility.GlobalUti.Role_User_Company));
-                    }
 
                     if (user.Role == null)
                     {

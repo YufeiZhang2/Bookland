@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using BulkyBook.DataAccess.Data;
+using BulkyBook.DataAccess.Initialiser;
 using BulkyBook.DataAccess.Repository;
 using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Utility;
@@ -16,6 +17,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Stripe;
 
 namespace BulkyBook
 {
@@ -39,7 +41,9 @@ namespace BulkyBook
             // .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddSingleton<IEmailSender, EmailSender>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IDbInitialiser, DBInitialiser>();
             services.Configure<EmailOptions>(Configuration);
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
             services.AddControllersWithViews();
             //enable razor pages to render the changes on runtime
             services.AddRazorPages().AddRazorRuntimeCompilation();
@@ -74,7 +78,7 @@ namespace BulkyBook
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitialiser dbInitialiser)
         {
             if (env.IsDevelopment())
             {
@@ -92,10 +96,12 @@ namespace BulkyBook
             app.UseStaticFiles();
 
             app.UseRouting();
+            StripeConfiguration.ApiKey = Configuration.GetSection("Stripe")["PublishableKey"];
             app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            //Initialise databse
+            dbInitialiser.Initialise();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

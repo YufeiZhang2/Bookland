@@ -1321,6 +1321,20 @@
           "lib/netstandard2.1/StarkbankEcdsa.dll": {}
         }
       },
+      "Stripe.net/37.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Stripe.net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Stripe.net.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1486,7 +1500,7 @@
           "System.Security.Permissions": "4.5.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
@@ -4356,6 +4370,26 @@
         "lib/netstandard2.1/StarkbankEcdsa.dll",
         "starkbank-ecdsa.1.2.0.nupkg.sha512",
         "starkbank-ecdsa.nuspec"
+      ]
+    },
+    "Stripe.net/37.18.0": {
+      "sha512": "95qHqXIIJhcvkXBFE8q22yx9NJXCIR2cUXXV2VYzS2qlvPoo7ev3mqU6wHYZDRNWP6r5x2Ew6VvlYa3XMVHRmQ==",
+      "type": "package",
+      "path": "stripe.net/37.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Stripe.net.dll",
+        "lib/net45/Stripe.net.pdb",
+        "lib/net45/Stripe.net.xml",
+        "lib/net461/Stripe.net.dll",
+        "lib/net461/Stripe.net.pdb",
+        "lib/net461/Stripe.net.xml",
+        "lib/netstandard2.0/Stripe.net.dll",
+        "lib/netstandard2.0/Stripe.net.pdb",
+        "lib/netstandard2.0/Stripe.net.xml",
+        "stripe.net.37.18.0.nupkg.sha512",
+        "stripe.net.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -8516,7 +8550,8 @@
       "Microsoft.AspNetCore.Mvc.ViewFeatures >= 2.2.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.5",
       "Microsoft.Extensions.Identity.Stores >= 3.1.5",
-      "SendGrid >= 9.18.0"
+      "SendGrid >= 9.18.0",
+      "Stripe.net >= 37.18.0"
     ]
   },
   "packageFolders": {
@@ -8585,6 +8620,10 @@
           "SendGrid": {
             "target": "Package",
             "version": "[9.18.0, )"
+          },
+          "Stripe.net": {
+            "target": "Package",
+            "version": "[37.18.0, )"
           }
         },
         "imports": [

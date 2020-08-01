@@ -85,7 +85,6 @@ namespace BulkyBook.Areas.Admin.Controllers
             //check all the validation defined in model - double check here
             if (ModelState.IsValid)
             {
-                Console.WriteLine(productViewModel.Product.Description);
                 string webRootPath = _hostEnvironment.WebRootPath;
                 //retrive the files
                 var files = HttpContext.Request.Form.Files;

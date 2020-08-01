@@ -18,6 +18,7 @@ namespace BulkyBook.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
         }
         
+        [HttpGet]
         public IActionResult Index()
         {
             return View();

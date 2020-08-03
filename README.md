@@ -37,7 +37,16 @@ Bookland is a proof-of concept web application selling a wide variety of books t
         Email: yufei.z222+admin@gmail.com
         Password: Admin123*
 
-## Build With ASP.NET CORE MVC, Entity Framework Core and Microsoft SQL Server
+## Build With ASP.NET CORE MVC
+
+    • Entity Framework Core
+    
+    • Microsoft SQL Server
+    
+    • Razor Pages
+    
+    • DataTables (Table plug-in for jQuery)
+
 
 ## Principles of code style
 

@@ -2831,10 +2831,7 @@
         },
         "runtime": {
           "bin/placeholder/BulkyBook.Models.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "BulkyBook.Utility/1.0.0": {
         "type": "project",
@@ -2853,10 +2850,7 @@
         },
         "runtime": {
           "bin/placeholder/BulkyBook.Utility.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -8969,9 +8963,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

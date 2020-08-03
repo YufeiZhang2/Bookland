@@ -3,6 +3,8 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <UserSecretsId>aspnet-BulkyBook-086E50EA-A572-45D0-A219-7D816A4C3827</UserSecretsId>
+        <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+        <AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>
     </PropertyGroup>
 
     <!--nuget package reference-->

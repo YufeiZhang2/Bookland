@@ -8,7 +8,7 @@ Bookland is a proof-of concept web application selling a wide variety of books t
 
     • View list of books and their details
 
-### Registered individual users can:
+### Registered individual users can
 
     • Register and login with their accounts, and logout
 
@@ -22,7 +22,7 @@ Bookland is a proof-of concept web application selling a wide variety of books t
 
     • Purchase books and receive extra discounts if the company is authorised
 
-### Users with admin role can:
+### Users with admin role can
 
     • Perform CRUD (Create, Read, Update, Delete) operations on book categories and cover types
 
@@ -31,11 +31,7 @@ Bookland is a proof-of concept web application selling a wide variety of books t
     • Perform CRUD operations on other users and company list
     
     • Lock and unlock other users
-
-    • To use the admin function, you can log into the admin account using this credentials (for testing purpose):
-
-        Email: yufei.z222+admin@gmail.com
-        Password: Admin123*
+    
 
 ## Build With ASP.NET CORE MVC
 
